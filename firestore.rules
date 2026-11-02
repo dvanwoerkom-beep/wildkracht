@@ -1,0 +1,69 @@
+rules_version = '2';
+
+// Wildkracht – beveiligingsregels voor de chat
+// - Alleen ingelogde bezoekers (Google-account) kunnen berichten lezen en plaatsen.
+// - Je kunt alleen berichten plaatsen onder je eigen naam, max. 1000 tekens, max. 1 bericht per 5 seconden.
+// - Je kunt je eigen berichten verwijderen; de beheerder kan alle berichten verwijderen.
+// - Meldingen kan iedere ingelogde bezoeker doen, maar alleen de beheerder kan ze lezen.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function ingelogd() {
+      return request.auth != null;
+    }
+
+    function isBeheerder() {
+      return ingelogd()
+        && request.auth.token.email == 'dvanwoerkom@gmail.com'
+        && request.auth.token.email_verified == true;
+    }
+
+    match /berichten/{berichtId} {
+      allow read: if ingelogd();
+
+      allow create: if ingelogd()
+        && request.resource.data.keys().hasAll(['tekst', 'uid', 'naam', 'tijd'])
+        && request.resource.data.keys().hasOnly(['tekst', 'uid', 'naam', 'foto', 'tijd'])
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.naam == request.auth.token.name
+        && request.resource.data.tekst is string
+        && request.resource.data.tekst.size() > 0
+        && request.resource.data.tekst.size() <= 1000
+        && (!('foto' in request.resource.data) || request.resource.data.foto == request.auth.token.picture)
+        && request.resource.data.tijd == request.time
+        // anti-spam: in dezelfde schrijfactie moet de "laatst geplaatst"-tijd worden bijgewerkt
+        && getAfter(/databases/$(database)/documents/gebruikers/$(request.auth.uid)).data.laatst == request.time;
+
+      allow delete: if ingelogd()
+        && (resource.data.uid == request.auth.uid || isBeheerder());
+
+      allow update: if false;
+    }
+
+    // Per gebruiker alleen het tijdstip van het laatste bericht (voor de anti-spamregel)
+    match /gebruikers/{uid} {
+      allow read: if ingelogd() && request.auth.uid == uid;
+      allow create, update: if ingelogd()
+        && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['laatst'])
+        && request.resource.data.laatst == request.time
+        && (resource == null || request.time > resource.data.laatst + duration.value(5, 's'));
+    }
+
+    match /meldingen/{meldingId} {
+      allow create: if ingelogd()
+        && request.resource.data.keys().hasOnly(['berichtId', 'tekst', 'naamAfzender', 'melderUid', 'melderNaam', 'tijd'])
+        && request.resource.data.melderUid == request.auth.uid
+        && request.resource.data.melderNaam == request.auth.token.name
+        && request.resource.data.tijd == request.time
+        && request.resource.data.berichtId is string
+        && request.resource.data.berichtId.size() <= 100
+        && request.resource.data.tekst is string
+        && request.resource.data.tekst.size() <= 1000
+        && request.resource.data.naamAfzender is string
+        && request.resource.data.naamAfzender.size() <= 200;
+      allow read, delete: if isBeheerder();
+      allow update: if false;
+    }
+  }
+}

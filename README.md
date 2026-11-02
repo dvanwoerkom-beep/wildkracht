@@ -56,3 +56,18 @@ Open daarna http://localhost:8420.
 2. Upload de inhoud van deze map of push hem met git.
 3. Ga naar **Settings → Pages**. Kies bij *Source* "Deploy from a branch", dan `main` en `/ (root)`.
 4. Na een minuut staat de site op `https://<gebruikersnaam>.github.io/wildkracht/`.
+
+## Firebase (login en gesprek)
+
+De site draait op **Firebase Hosting**: https://wildkracht-nl.web.app (Firebase-project `wildkracht-nl`).
+
+- **Inloggen** met een Google-account: `assets/js/firebase.js` (verbinding) en `assets/js/account.js` (knop in de header).
+- **Gesprek**: `gesprek.html` en `assets/js/gesprek.js`. Berichten staan in Firestore (regio Europa, `eur3`).
+- **Beveiliging**: `firestore.rules`. Alleen ingelogde bezoekers lezen en schrijven, maximaal 1000 tekens en 1 bericht per 5 seconden. Je verwijdert alleen je eigen berichten. De beheerder (`dvanwoerkom@gmail.com`) kan alles verwijderen en ziet de meldingen.
+- Een andere beheerder instellen: pas het e-mailadres aan in **zowel** `firestore.rules` als `assets/js/firebase.js`.
+
+Publiceren na een wijziging:
+
+```
+firebase deploy
+```

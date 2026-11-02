@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gesprek – Wildkracht</title>
+  <meta name="description" content="Praat mee over natuurbehoud dat werkt. Log in met je Google-account en deel je vragen, ideeën en ervaringen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip" href="#inhoud">Naar de inhoud</a>
+
+  <header class="site-header" data-header data-solid>
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html" aria-label="Wildkracht – home">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="22" r="11" fill="var(--zon)"/>
+          <path d="M2 27 C 10 23, 16 26, 22 24 S 34 21, 38 24 L38 40 L2 40 Z" fill="currentColor"/>
+        </svg>
+        <span>Wildkracht</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="hoofdmenu" data-nav-toggle>
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="sr">Menu</span>
+      </button>
+      <nav id="hoofdmenu" class="main-nav" aria-label="Hoofdmenu" data-nav>
+        <a href="index.html#projecten">Projecten</a>
+        <a href="index.html#kaart">Kaart</a>
+        <a href="wat-kun-jij-doen.html">Wat kun jij doen</a>
+        <a href="gesprek.html" aria-current="page">Gesprek</a>
+        <a class="nav-kids" href="kids/index.html">Voor kinderen</a>
+        <div class="account" data-account></div>
+        <a class="btn btn-accent btn-sm" href="doneer.html">Doneer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhoud">
+    <section class="wrap pagina-kop">
+      <p class="kicker">Gesprek</p>
+      <h1>Praat mee over natuur die werkt</h1>
+      <p class="lead">Heb je een vraag over een project, een idee of een eigen ervaring met natuur in Afrika? Deel het hier met andere bezoekers.</p>
+    </section>
+
+    <div class="wrap gesprek-layout">
+      <section class="chat" aria-labelledby="chat-kop">
+        <h2 id="chat-kop" class="sr">Berichten</h2>
+
+        <div class="chat-uitgelogd" data-uitgelogd hidden>
+          <h3>Log in om mee te lezen en te praten</h3>
+          <p>Je logt in met je Google-account. Andere bezoekers zien je naam en profielfoto bij je berichten.</p>
+          <button type="button" class="btn btn-accent google-knop" data-login>
+            <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.7 13.3l7.9 6.1C12.5 13.6 17.8 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.8c4.3-4 6.9-9.9 6.9-17.2z"/><path fill="#FBBC05" d="M10.6 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.7 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.8-5.8l-7.4-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.2 0-11.5-4.1-13.4-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg>
+            Inloggen met Google
+          </button>
+        </div>
+
+        <div class="chat-venster" data-venster hidden>
+          <ol class="berichten" data-berichten aria-live="polite" aria-label="Berichten"></ol>
+          <form class="chat-form" data-form>
+            <label class="sr" for="bericht">Jouw bericht</label>
+            <textarea id="bericht" name="tekst" rows="3" maxlength="1000" placeholder="Schrijf een bericht… (Enter = versturen, Shift+Enter = nieuwe regel)" required></textarea>
+            <div class="chat-form-onder">
+              <span class="chat-teller" data-teller>0 / 1000</span>
+              <span class="chat-fout" data-fout role="alert"></span>
+              <button type="submit" class="btn btn-accent btn-sm">Plaats bericht</button>
+            </div>
+          </form>
+        </div>
+
+        <p class="chat-laden" data-laden>Gesprek laden…</p>
+      </section>
+
+      <aside class="gesprek-zij">
+        <section class="huisregels" aria-labelledby="regels-kop">
+          <h2 id="regels-kop" class="zij-kop">Huisregels</h2>
+          <ol>
+            <li><strong>Wees vriendelijk.</strong> Je praat met echte mensen. Verschil van mening mag, respect is de basis.</li>
+            <li><strong>Blijf bij het onderwerp:</strong> natuur, dieren, de projecten en wat jij kunt doen.</li>
+            <li><strong>Deel geen persoonlijke gegevens,</strong> zoals je adres of telefoonnummer.</li>
+            <li><strong>Geen reclame, spam of nepnieuws.</strong> Noem je een cijfer? Zet er een bron bij.</li>
+            <li><strong>Zie je iets wat niet klopt?</strong> Gebruik de knop <em>Meld</em>. De beheerder kijkt ernaar en kan berichten verwijderen.</li>
+          </ol>
+          <p class="huisregels-noot">Je kunt je eigen berichten altijd zelf verwijderen. Berichten zijn alleen zichtbaar voor ingelogde bezoekers.</p>
+        </section>
+
+        <section class="meldingen" data-meldingen hidden aria-labelledby="meld-kop">
+          <h2 id="meld-kop" class="zij-kop">Meldingen <span data-meld-aantal></span></h2>
+          <ul data-meld-lijst></ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="logo logo-footer" href="index.html">
+          <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="22" r="11" fill="var(--zon)"/>
+            <path d="M2 27 C 10 23, 16 26, 22 24 S 34 21, 38 24 L38 40 L2 40 Z" fill="currentColor"/>
+          </svg>
+          <span>Wildkracht</span>
+        </a>
+        <p class="footer-tag">Goed nieuws uit het wild. Een conceptwebsite over natuurbehoud in Afrika dat werkt, voor de natuur én voor de mensen die er leven.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-kop">Ontdek</h2>
+        <a href="index.html#projecten">Projecten</a>
+        <a href="index.html#kaart">Kaart</a>
+        <a href="wat-kun-jij-doen.html">Wat kun jij doen</a>
+        <a href="gesprek.html">Gesprek</a>
+        <a href="doneer.html">Doneer</a>
+      </nav>
+      <nav aria-label="Kinderen">
+        <h2 class="footer-kop">Voor kinderen</h2>
+        <a href="kids/index.html">Wildkracht Rangers</a>
+        <a href="kids/ouders.html">Voor ouders &amp; leraren</a>
+      </nav>
+    </div>
+    <div class="wrap footer-credits">
+      <details>
+        <summary>Fotoverantwoording</summary>
+        <ul data-fotocredits></ul>
+      </details>
+      <p>© Wildkracht · conceptwebsite · cijfers uit openbare bronnen, zie de bronnen bij elk artikel.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script type="module" src="assets/js/account.js"></script>
+  <script type="module" src="assets/js/gesprek.js"></script>
+</body>
+</html>
