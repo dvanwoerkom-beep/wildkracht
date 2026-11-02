@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wildkracht – goed nieuws uit het wild</title>
+  <meta name="description" content="Wildkracht laat zien hoe mensen in Afrika de natuur terugbrengen, en daar zelf sterker van worden. Ontdek 8 natuurprojecten, de kaart en de dierenquiz voor kinderen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip" href="#inhoud">Naar de inhoud</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html" aria-label="Wildkracht – home">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="22" r="11" fill="var(--zon)"/>
+          <path d="M2 27 C 10 23, 16 26, 22 24 S 34 21, 38 24 L38 40 L2 40 Z" fill="currentColor"/>
+        </svg>
+        <span>Wildkracht</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="hoofdmenu" data-nav-toggle>
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="sr">Menu</span>
+      </button>
+      <nav id="hoofdmenu" class="main-nav" aria-label="Hoofdmenu" data-nav>
+        <a href="#projecten">Projecten</a>
+        <a href="#kaart">Kaart</a>
+        <a href="#zelf-doen">Wat kun jij doen</a>
+        <a class="nav-kids" href="kids/index.html">Voor kinderen</a>
+        <a class="btn btn-accent btn-sm" href="doneer.html">Doneer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhoud">
+
+    <!-- HERO -->
+    <section class="hero">
+      <img class="hero-img" src="assets/img/foto/hero-neushoorns.jpg" alt="Een witte neushoornmoeder buigt haar kop naar haar pasgeboren kalf in het droge gras" fetchpriority="high">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="wrap hero-content">
+        <p class="kicker kicker-light">Goed nieuws uit het wild</p>
+        <h1>Het wild komt <span class="scribble">terug<svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14 C 40 4, 80 18, 120 9 S 180 6, 197 11"/></svg></span>.</h1>
+        <p class="hero-lead">Overal in Afrika brengen rangers, boeren, vissers en dorpen de natuur terug, en ze worden er zelf sterker van. Wildkracht laat zien hoe.</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#projecten">Bekijk de 8 projecten</a>
+          <a class="btn btn-ghost-light" href="doneer.html">Doneer</a>
+        </div>
+      </div>
+      <p class="photo-credit hero-credit">Witte neushoorn met haar kalf, Namibië · Foto: Giles Laurent, CC BY-SA 4.0</p>
+    </section>
+
+    <!-- VAN... NAAR... -->
+    <section class="section bewijs" aria-labelledby="bewijs-titel">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Van… naar…</p>
+          <h2 id="bewijs-titel">Herstel is geen wensdenken. Het gebeurt al.</h2>
+        </div>
+        <ol class="stats">
+          <li class="stat">
+            <p class="stat-van">Van een leeggeschoten park</p>
+            <p class="stat-num"><span data-count="110513">110.513</span></p>
+            <p class="stat-naar">grote dieren geteld in Gorongosa, Mozambique <span class="stat-jaar">(2024)</span></p>
+          </li>
+          <li class="stat">
+            <p class="stat-van">Van een paar honderd</p>
+            <p class="stat-num"><span data-count="1063">1.063</span></p>
+            <p class="stat-naar">berggorilla's bij de laatste telling in het Virunga-gebergte en Bwindi</p>
+          </li>
+          <li class="stat">
+            <p class="stat-van">Van een fokfarm</p>
+            <p class="stat-num"><span data-count="740">740</span>+</p>
+            <p class="stat-naar">neushoorns terug in het wild, met als doel 2.000 in tien jaar</p>
+          </li>
+          <li class="stat">
+            <p class="stat-van">Van kale akkers</p>
+            <p class="stat-num">±<span data-count="5">5</span> mln</p>
+            <p class="stat-naar">hectare weer groen in Niger, door boeren zelf <span class="stat-jaar">(schatting)</span></p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROJECTEN -->
+    <section class="section projecten" id="projecten" aria-labelledby="projecten-titel">
+      <div class="wrap">
+        <div class="section-head section-head-split">
+          <div>
+            <p class="kicker">De projecten</p>
+            <h2 id="projecten-titel">8 projecten die werken, voor natuur én mensen</h2>
+          </div>
+          <p class="section-intro">Elk verhaal begint bij de mensen die het werk doen. We vertellen wat er goed gaat, en eerlijk waar het nog beter kan.</p>
+        </div>
+        <ul class="project-grid" data-projecten>
+          <!-- gevuld door main.js vanuit data/projecten.json -->
+        </ul>
+      </div>
+    </section>
+
+    <!-- KAART -->
+    <section class="section kaart-sectie" id="kaart" aria-labelledby="kaart-titel">
+      <div class="wrap kaart-layout">
+        <div class="kaart-tekst">
+          <p class="kicker kicker-light">De kaart</p>
+          <h2 id="kaart-titel">Waar het gebeurt</h2>
+          <p>Van de Sahel tot de kust van Madagaskar. Klik op een punt om het project te bekijken.</p>
+        </div>
+        <div class="kaart-panel" data-kaart-panel aria-live="polite">
+          <p class="kaart-hint">Kies een project op de kaart.</p>
+        </div>
+        <div class="kaart-figuur">
+          <svg class="kaart" data-kaart role="img" aria-label="Kaart van Afrika met de 8 projecten"></svg>
+          <ul class="kaart-lijst" data-kaart-lijst aria-label="Projecten op de kaart"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOE WIJ KIEZEN -->
+    <section class="section keuze" aria-labelledby="keuze-titel">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Hoe wij kiezen</p>
+          <h2 id="keuze-titel">Wanneer noemen we een project geslaagd?</h2>
+        </div>
+        <ol class="criteria">
+          <li>
+            <span class="criteria-nr">1</span>
+            <h3>De natuur herstelt aantoonbaar</h3>
+            <p>Er komen dieren terug, het bos groeit of de vangst neemt toe. Dat blijkt uit tellingen en onderzoek, niet uit mooie woorden.</p>
+          </li>
+          <li>
+            <span class="criteria-nr">2</span>
+            <h3>Mensen in de buurt profiteren en beslissen mee</h3>
+            <p>Er komen banen, scholen, inkomen en zeggenschap bij. Lokale rangers, boeren en vissers zijn de hoofdrolspelers.</p>
+          </li>
+          <li>
+            <span class="criteria-nr">3</span>
+            <h3>We zijn eerlijk over de kanttekeningen</h3>
+            <p>Geen project is perfect. Bij elk verhaal lees je ook wat er schuurt en wat er beter moet.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- KIDS -->
+    <section class="section kids-teaser" aria-labelledby="kids-titel">
+      <div class="wrap kids-layout">
+        <div class="kids-beeld">
+          <picture>
+            <source srcset="assets/img/mascotte-pip.webp" type="image/webp">
+            <img class="mascotte" src="assets/img/mascotte-pip.png" alt="Schubdier Pip, de gids van Wildkracht Rangers, staat rechtop met een groen sjaaltje om" width="626" height="720" loading="lazy">
+          </picture>
+        </div>
+        <div class="kids-tekst">
+          <p class="kicker">Voor kinderen van 6 tot 12</p>
+          <h2 id="kids-titel">Wildkracht Rangers</h2>
+          <p>Ga met schubdier Pip op ontdekkingstocht langs 10 Afrikaanse dieren. Kijk korte filmpjes, doe de quiz en word Jonge Ranger, met een eigen diploma.</p>
+          <div class="kids-actions">
+            <a class="btn btn-dark" href="kids/index.html">Naar de kidssite</a>
+            <a class="link-arrow" href="kids/ouders.html">Voor ouders &amp; leraren</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ZELF DOEN -->
+    <section class="section zelf-doen" id="zelf-doen" aria-labelledby="zelf-titel">
+      <div class="wrap">
+        <div class="section-head section-head-split">
+          <div>
+            <p class="kicker">Wat kun jij doen</p>
+            <h2 id="zelf-titel">Drie dingen die echt verschil maken</h2>
+          </div>
+          <a class="link-arrow" href="wat-kun-jij-doen.html">Alle tips</a>
+        </div>
+        <ol class="acties">
+          <li>
+            <h3>Geef aan het werk ter plekke</h3>
+            <p>Rangers, scholen en vergoedingen voor boeren kosten geld. Geef aan het algemene fonds of kies zelf een project.</p>
+          </li>
+          <li>
+            <h3>Reis bewust</h3>
+            <p>Ga je op safari? Kies parken en lodges die inkomsten delen met de dorpen in de buurt. Zo wordt natuur voor iedereen waardevol.</p>
+          </li>
+          <li>
+            <h3>Vertel de goede verhalen door</h3>
+            <p>Hoop is besmettelijk. Deel een project dat je raakt, met je vrienden, op je werk of in de klas van je kind.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- DONEER -->
+    <section class="doneer-band" aria-labelledby="doneer-titel">
+      <img src="assets/img/foto/amboseli-olifant.jpg" alt="" loading="lazy">
+      <div class="doneer-shade" aria-hidden="true"></div>
+      <div class="wrap doneer-inner">
+        <h2 id="doneer-titel">Help het wild terug te komen</h2>
+        <p>Geef aan het Wildkrachtfonds of kies zelf een project. Je ziet direct wat je bijdrage mogelijk maakt.</p>
+        <a class="btn btn-accent" href="doneer.html">Doneer</a>
+        <p class="concept-note">Dit is een conceptwebsite: doneren is een schets en er wordt niets afgeschreven.</p>
+      </div>
+      <p class="photo-credit">Olifant in Amboseli, Kenia · Foto: Diego Delso, CC BY-SA 4.0</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="logo logo-footer" href="index.html">
+          <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="22" r="11" fill="var(--zon)"/>
+            <path d="M2 27 C 10 23, 16 26, 22 24 S 34 21, 38 24 L38 40 L2 40 Z" fill="currentColor"/>
+          </svg>
+          <span>Wildkracht</span>
+        </a>
+        <p class="footer-tag">Goed nieuws uit het wild. Een conceptwebsite over natuurbehoud in Afrika dat werkt, voor de natuur én voor de mensen die er leven.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-kop">Ontdek</h2>
+        <a href="#projecten">Projecten</a>
+        <a href="#kaart">Kaart</a>
+        <a href="wat-kun-jij-doen.html">Wat kun jij doen</a>
+        <a href="doneer.html">Doneer</a>
+      </nav>
+      <nav aria-label="Kinderen">
+        <h2 class="footer-kop">Voor kinderen</h2>
+        <a href="kids/index.html">Wildkracht Rangers</a>
+        <a href="kids/ouders.html">Voor ouders &amp; leraren</a>
+      </nav>
+    </div>
+    <div class="wrap footer-credits">
+      <details>
+        <summary>Fotoverantwoording</summary>
+        <ul data-fotocredits></ul>
+      </details>
+      <p>© Wildkracht · conceptwebsite · cijfers uit openbare bronnen, zie de bronnen bij elk artikel.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/kaart.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dierenquiz – Wildkracht Rangers</title>
+  <meta name="description" content="De dierenquiz van Wildkracht Rangers: 10 Afrikaanse dieren, filmpjes en vragen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="kids.css">
+  <link rel="icon" href="../assets/img/logo-mark.svg" type="image/svg+xml">
+</head>
+<body class="kids">
+  <a class="skip" href="#inhoud">Naar de quiz</a>
+
+  <header class="kids-header">
+    <div class="wrap header-inner">
+      <a class="kids-logo" href="index.html" aria-label="Wildkracht Rangers – start">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="22" r="11" fill="var(--zon)"/>
+          <path d="M2 27 C 10 23, 16 26, 22 24 S 34 21, 38 24 L38 40 L2 40 Z" fill="var(--savanne-donker)"/>
+        </svg>
+        <span>Wildkracht Rangers<small data-niveau-naam>Dierenquiz</small></span>
+      </a>
+      <nav class="kids-nav" aria-label="Kidsmenu">
+        <a href="index.html">Stoppen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhoud">
+    <div class="quiz-wrap">
+      <div class="voortgang" data-voortgang>
+        <span class="voortgang-tekst" data-voortgang-tekst>Laden…</span>
+        <div class="voortgang-balk" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-label="Voortgang"><span style="width:0%"></span></div>
+        <span class="sterren" data-sterren aria-live="polite"></span>
+      </div>
+      <div data-scherm aria-live="polite"></div>
+    </div>
+  </main>
+
+  <script src="kids.js"></script>
+  <script src="quiz.js"></script>
+</body>
+</html>

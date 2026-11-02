@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project – Wildkracht</title>
+  <meta name="description" content="Een natuurproject in Afrika dat werkt, voor de natuur én de mensen die er leven.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip" href="#inhoud">Naar de inhoud</a>
+
+  <header class="site-header" data-header>
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html" aria-label="Wildkracht – home">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="22" r="11" fill="var(--zon)"/>
+          <path d="M2 27 C 10 23, 16 26, 22 24 S 34 21, 38 24 L38 40 L2 40 Z" fill="currentColor"/>
+        </svg>
+        <span>Wildkracht</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="hoofdmenu" data-nav-toggle>
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="sr">Menu</span>
+      </button>
+      <nav id="hoofdmenu" class="main-nav" aria-label="Hoofdmenu" data-nav>
+        <a href="index.html#projecten" aria-current="page">Projecten</a>
+        <a href="index.html#kaart">Kaart</a>
+        <a href="wat-kun-jij-doen.html">Wat kun jij doen</a>
+        <a class="nav-kids" href="kids/index.html">Voor kinderen</a>
+        <a class="btn btn-accent btn-sm" href="doneer.html">Doneer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhoud" data-project>
+    <section class="artikel-hero">
+      <img class="artikel-hero-img" data-veld="foto" src="" alt="">
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="wrap artikel-hero-inhoud">
+        <a class="terug-link" href="index.html#projecten">Alle projecten</a>
+        <p class="kicker kicker-light"><span data-veld="land"></span></p>
+        <h1 data-veld="titel">Project laden…</h1>
+        <p class="artikel-meta"><span data-veld="aanpak"></span> · <span data-veld="leestijd"></span></p>
+      </div>
+      <p class="photo-credit hero-credit" data-veld="credit"></p>
+    </section>
+
+    <div class="wrap artikel-layout">
+      <article class="artikel" data-veld="tekst" aria-live="polite">
+        <p class="laden">Het verhaal wordt geladen…</p>
+      </article>
+
+      <aside class="artikel-zij">
+        <section class="cijferkaart" aria-labelledby="cijfers-kop">
+          <h2 id="cijfers-kop" class="zij-kop">In cijfers</h2>
+          <dl data-veld="cijfers"></dl>
+        </section>
+        <section class="steunkaart" aria-labelledby="steun-kop">
+          <h2 id="steun-kop">Steun dit project</h2>
+          <p>Je gift gaat naar het werk ter plekke: rangers, scholen en inkomen voor de mensen die de natuur beschermen.</p>
+          <a class="btn btn-accent" data-veld="doneerlink" href="doneer.html">Doneer aan dit project</a>
+          <p class="concept-note">Conceptwebsite: doneren is een schets.</p>
+        </section>
+      </aside>
+    </div>
+
+    <section class="section meer-projecten" aria-labelledby="meer-kop">
+      <div class="wrap">
+        <div class="section-head section-head-split">
+          <div>
+            <p class="kicker">Lees verder</p>
+            <h2 id="meer-kop">Meer projecten die werken</h2>
+          </div>
+          <a class="link-arrow" href="index.html#projecten">Alle 8 projecten</a>
+        </div>
+        <ul class="project-grid project-grid-drie" data-meer></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="logo logo-footer" href="index.html">
+          <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="22" r="11" fill="var(--zon)"/>
+            <path d="M2 27 C 10 23, 16 26, 22 24 S 34 21, 38 24 L38 40 L2 40 Z" fill="currentColor"/>
+          </svg>
+          <span>Wildkracht</span>
+        </a>
+        <p class="footer-tag">Goed nieuws uit het wild. Een conceptwebsite over natuurbehoud in Afrika dat werkt, voor de natuur én voor de mensen die er leven.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-kop">Ontdek</h2>
+        <a href="index.html#projecten">Projecten</a>
+        <a href="index.html#kaart">Kaart</a>
+        <a href="wat-kun-jij-doen.html">Wat kun jij doen</a>
+        <a href="doneer.html">Doneer</a>
+      </nav>
+      <nav aria-label="Kinderen">
+        <h2 class="footer-kop">Voor kinderen</h2>
+        <a href="kids/index.html">Wildkracht Rangers</a>
+        <a href="kids/ouders.html">Voor ouders &amp; leraren</a>
+      </nav>
+    </div>
+    <div class="wrap footer-credits">
+      <details>
+        <summary>Fotoverantwoording</summary>
+        <ul data-fotocredits></ul>
+      </details>
+      <p>© Wildkracht · conceptwebsite · cijfers uit openbare bronnen, zie de bronnen bij elk artikel.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/project.js" defer></script>
+</body>
+</html>

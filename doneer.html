@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doneer – Wildkracht</title>
+  <meta name="description" content="Steun natuurprojecten in Afrika die werken voor natuur én mensen. (Conceptwebsite: doneren is een schets.)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip" href="#inhoud">Naar de inhoud</a>
+
+  <header class="site-header" data-header data-solid>
+    <div class="wrap header-inner">
+      <a class="logo" href="index.html" aria-label="Wildkracht – home">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="22" r="11" fill="var(--zon)"/>
+          <path d="M2 27 C 10 23, 16 26, 22 24 S 34 21, 38 24 L38 40 L2 40 Z" fill="currentColor"/>
+        </svg>
+        <span>Wildkracht</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="hoofdmenu" data-nav-toggle>
+        <span class="nav-toggle-bars" aria-hidden="true"></span><span class="sr">Menu</span>
+      </button>
+      <nav id="hoofdmenu" class="main-nav" aria-label="Hoofdmenu" data-nav>
+        <a href="index.html#projecten">Projecten</a>
+        <a href="index.html#kaart">Kaart</a>
+        <a href="wat-kun-jij-doen.html">Wat kun jij doen</a>
+        <a class="nav-kids" href="kids/index.html">Voor kinderen</a>
+        <a class="btn btn-accent btn-sm" href="doneer.html" aria-current="page">Doneer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhoud">
+    <div class="wrap doneer-layout">
+      <div class="doneer-intro">
+        <p class="kicker">Doneer</p>
+        <h1>Help het wild terug te komen</h1>
+        <p class="lead">Je gift gaat naar het werk ter plekke: rangers uit de buurt, scholen, vergoedingen voor boeren en herstel van leefgebied.</p>
+        <figure class="doneer-foto">
+          <img src="assets/img/foto/gorilla-boom.jpg" alt="Een jonge berggorilla klimt in een boom in het regenwoud van Bwindi" loading="lazy">
+          <figcaption>Berggorilla in Bwindi, Oeganda · Foto: Giles Laurent, CC BY-SA 4.0</figcaption>
+        </figure>
+        <div class="concept-banner" role="note">
+          <strong>Dit is een schets.</strong> Wildkracht is een conceptwebsite. Er wordt geen geld afgeschreven en je gegevens worden nergens opgeslagen.
+        </div>
+      </div>
+
+      <form class="doneer-form" data-doneer-form novalidate>
+        <fieldset class="stap">
+          <legend><span class="stap-nr">1</span> Waar gaat je gift naartoe?</legend>
+          <div class="doel-lijst" data-doelen>
+            <label class="doel doel-fonds">
+              <input type="radio" name="doel" value="fonds" checked>
+              <span class="doel-kaart">
+                <span class="doel-titel">Wildkrachtfonds</span>
+                <span class="doel-sub">Verdeeld over alle 8 projecten, daar waar het het meest nodig is</span>
+              </span>
+            </label>
+            <!-- projecten worden hier door doneer.js toegevoegd -->
+          </div>
+        </fieldset>
+
+        <fieldset class="stap">
+          <legend><span class="stap-nr">2</span> Hoe vaak?</legend>
+          <div class="schakel">
+            <label><input type="radio" name="frequentie" value="eenmalig" checked><span>Eenmalig</span></label>
+            <label><input type="radio" name="frequentie" value="maandelijks"><span>Maandelijks</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="stap">
+          <legend><span class="stap-nr">3</span> Hoeveel?</legend>
+          <div class="bedragen">
+            <label><input type="radio" name="bedrag" value="10"><span>€ 10</span></label>
+            <label><input type="radio" name="bedrag" value="25" checked><span>€ 25</span></label>
+            <label><input type="radio" name="bedrag" value="50"><span>€ 50</span></label>
+            <label><input type="radio" name="bedrag" value="100"><span>€ 100</span></label>
+          </div>
+          <label class="ander-bedrag">
+            <span>Ander bedrag</span>
+            <span class="euro-veld"><span aria-hidden="true">€</span><input type="number" min="1" step="1" inputmode="numeric" name="ander" placeholder="bijv. 35"></span>
+          </label>
+          <p class="impact" data-impact aria-live="polite"></p>
+          <p class="impact-noot">Voorbeelden ter illustratie. Echte kosten verschillen per project en per land.</p>
+        </fieldset>
+
+        <fieldset class="stap">
+          <legend><span class="stap-nr">4</span> Jouw gegevens</legend>
+          <div class="velden">
+            <label>Voornaam <input type="text" name="naam" autocomplete="off" placeholder="Voornaam"></label>
+            <label>E-mailadres <input type="email" name="email" autocomplete="off" placeholder="naam@voorbeeld.nl"></label>
+          </div>
+          <p class="impact-noot">In deze schets worden je gegevens niet verstuurd of bewaard.</p>
+        </fieldset>
+
+        <button class="btn btn-accent btn-groot" type="submit" data-knop>Doneer € 25</button>
+      </form>
+
+      <section class="bedankt" data-bedankt hidden tabindex="-1" aria-labelledby="bedankt-kop">
+        <p class="kicker">Dank je wel</p>
+        <h2 id="bedankt-kop" data-bedankt-kop>Dank je wel!</h2>
+        <p data-bedankt-tekst></p>
+        <p class="concept-banner"><strong>Schets:</strong> er is niets afgeschreven. In de echte versie zou je hier naar een veilige betaalpagina gaan (bijvoorbeeld iDEAL).</p>
+        <div class="kids-actions">
+          <a class="btn btn-dark" href="index.html#projecten">Lees meer verhalen</a>
+          <a class="link-arrow" href="wat-kun-jij-doen.html">Meer dan doneren</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <a class="logo logo-footer" href="index.html">
+          <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+            <circle cx="20" cy="22" r="11" fill="var(--zon)"/>
+            <path d="M2 27 C 10 23, 16 26, 22 24 S 34 21, 38 24 L38 40 L2 40 Z" fill="currentColor"/>
+          </svg>
+          <span>Wildkracht</span>
+        </a>
+        <p class="footer-tag">Goed nieuws uit het wild. Een conceptwebsite over natuurbehoud in Afrika dat werkt, voor de natuur én voor de mensen die er leven.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-kop">Ontdek</h2>
+        <a href="index.html#projecten">Projecten</a>
+        <a href="index.html#kaart">Kaart</a>
+        <a href="wat-kun-jij-doen.html">Wat kun jij doen</a>
+        <a href="doneer.html">Doneer</a>
+      </nav>
+      <nav aria-label="Kinderen">
+        <h2 class="footer-kop">Voor kinderen</h2>
+        <a href="kids/index.html">Wildkracht Rangers</a>
+        <a href="kids/ouders.html">Voor ouders &amp; leraren</a>
+      </nav>
+    </div>
+    <div class="wrap footer-credits">
+      <details>
+        <summary>Fotoverantwoording</summary>
+        <ul data-fotocredits></ul>
+      </details>
+      <p>© Wildkracht · conceptwebsite · cijfers uit openbare bronnen, zie de bronnen bij elk artikel.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/doneer.js" defer></script>
+</body>
+</html>

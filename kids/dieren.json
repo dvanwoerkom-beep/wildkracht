@@ -1,0 +1,252 @@
+[
+  {
+    "id": "olifant",
+    "naam": "Afrikaanse olifant",
+    "kort": "Olifant",
+    "foto": "amboseli-olifant",
+    "fotoAlt": "Een grote olifant met lange slagtanden loopt door het groen",
+    "pip": "De olifant is het grootste dier dat op het land leeft. En wist je dat de baas van de familie altijd een oma is?",
+    "weetjes": [
+      "In een slurf zitten tienduizenden spiertjes. Een olifant kan er een boom mee optillen én een pinda mee oppakken.",
+      "Een olifant eet wel 150 kilo planten per dag. Dat is net zoveel als honderden boterhammen!",
+      "Olifanten 'praten' met een diep gerommel dat je soms niet eens kunt horen. Andere olifanten voelen het via hun voeten."
+    ],
+    "video": { "id": "YftNBs1rN-w", "titel": "Alles over de olifant", "bron": "WWF-Rangers", "taal": "nl" },
+    "vragen": {
+      "jong": [
+        { "vraag": "Wie is de baas van een olifantenfamilie?", "opties": ["De oudste oma-olifant", "De grootste papa-olifant", "De jongste baby"], "goed": 0, "uitleg": "De oudste vrouwtjesolifant is de baas. Zij weet waar het water en het lekkerste eten is." }
+      ],
+      "oud": [
+        { "vraag": "Waarvoor gebruiken olifanten hun grote oren vooral?", "opties": ["Om af te koelen", "Om beter te ruiken", "Om sneller te rennen"], "goed": 0, "uitleg": "In de oren zitten veel bloedvaten. Door met hun oren te wapperen koelt het bloed af, net als een ventilator." },
+        { "vraag": "Hoeveel eten kan een volwassen olifant per dag eten?", "opties": ["5 kilo", "50 kilo", "Wel 150 kilo"], "goed": 2, "uitleg": "Een olifant is bijna de hele dag aan het eten: gras, bladeren, takken en vruchten. Wel 150 kilo per dag!" }
+      ]
+    },
+    "actie": "Olifanten hebben ruimte nodig. Rangers in Kenia zorgen dat er al jaren geen olifant meer is gestroopt in hun gebied.",
+    "project": "amboseli"
+  },
+  {
+    "id": "leeuw",
+    "naam": "Leeuw",
+    "kort": "Leeuw",
+    "foto": "amboseli-leeuwen",
+    "fotoAlt": "Drie leeuwen liggen naast elkaar en kijken in de camera",
+    "pip": "Leeuwen zijn de enige katten die in een grote familie leven. En raad eens wie er het meest jaagt?",
+    "weetjes": [
+      "Het brullen van een leeuw kun je tot wel 8 kilometer ver horen.",
+      "Leeuwen slapen en rusten tot wel 20 uur per dag. Lekker luieren in de schaduw!",
+      "In Kenia beschermen jonge Maasai-krijgers de leeuwen. Vroeger jaagden ze erop, nu passen ze erop!"
+    ],
+    "video": { "id": "SPGpM00LUQI", "titel": "Leeuw – Boenende Beesten", "bron": "Het Klokhuis", "taal": "nl" },
+    "vragen": {
+      "jong": [
+        { "vraag": "Wie jaagt het meest in een leeuwenfamilie?", "opties": ["De leeuwinnen", "De mannetjes met manen", "De welpjes"], "goed": 0, "uitleg": "De leeuwinnen werken samen en doen het meeste jachtwerk. De mannetjes beschermen het gebied." }
+      ],
+      "oud": [
+        { "vraag": "Hoe ver kun je het brullen van een leeuw horen?", "opties": ["100 meter", "1 kilometer", "Tot wel 8 kilometer"], "goed": 2, "uitleg": "Met hun gebrul laten leeuwen tot wel 8 kilometer ver weten: dit is óns gebied!" },
+        { "vraag": "Hoe helpen de Lion Guardians in Kenia de leeuwen?", "opties": ["Ze waarschuwen herders als er een leeuw in de buurt is", "Ze brengen leeuwen naar de dierentuin", "Ze geven leeuwen elke dag eten"], "goed": 0, "uitleg": "Zo kunnen herders hun koeien op tijd veilig zetten en hoeft niemand boos te worden op de leeuw." }
+      ]
+    },
+    "actie": "De Lion Guardians in Kenia volgen leeuwen en helpen herders hun koeien te beschermen. Zo blijven mens en leeuw vrienden.",
+    "project": "amboseli"
+  },
+  {
+    "id": "giraf",
+    "naam": "Giraf",
+    "kort": "Giraf",
+    "foto": "dier-giraf",
+    "fotoAlt": "Een giraf staat in het gras tussen de bomen",
+    "pip": "De giraf is het langste dier van de wereld. Hij kan zó over een huis heen kijken!",
+    "weetjes": [
+      "Een giraf heeft net zoveel nekwervels als jij: zeven! Alleen zijn ze bij hem véél langer.",
+      "De tong van een giraf is ongeveer 45 centimeter lang en donker van kleur. Die kleur beschermt hem waarschijnlijk tegen de zon.",
+      "Geen giraf heeft dezelfde vlekken. Het is een soort vingerafdruk!"
+    ],
+    "video": { "id": "4P1ZQLEQ0nM", "titel": "Alles over de giraf", "bron": "Het Klokhuis", "taal": "nl" },
+    "vragen": {
+      "jong": [
+        { "vraag": "Welke kleur heeft de tong van een giraf?", "opties": ["Roze", "Donkerblauw-paars", "Groen"], "goed": 1, "uitleg": "De tong is heel donker. Waarschijnlijk zodat hij niet verbrandt in de zon terwijl de giraf blaadjes eet." }
+      ],
+      "oud": [
+        { "vraag": "Hoeveel nekwervels heeft een giraf?", "opties": ["7, net als jij", "20", "50"], "goed": 0, "uitleg": "Bijna alle zoogdieren hebben er zeven, ook jij! Bij de giraf is elke wervel wel zo lang als je onderarm." },
+        { "vraag": "Hoe lang is de tong van een giraf ongeveer?", "opties": ["5 centimeter", "45 centimeter", "2 meter"], "goed": 1, "uitleg": "Met die lange tong pakt hij blaadjes tussen de doornen van de acacia vandaan." }
+      ]
+    },
+    "actie": "In Akagera in Rwanda lopen giraffen weer vrij rond, samen met leeuwen en neushoorns die zijn teruggebracht.",
+    "project": "akagera"
+  },
+  {
+    "id": "neushoorn",
+    "naam": "Witte neushoorn",
+    "kort": "Neushoorn",
+    "foto": "rhino-rewild",
+    "fotoAlt": "Een witte neushoorn graast in het droge gras",
+    "pip": "Neushoorns zien er stoer uit met hun hoorn. Maar weet je waar die hoorn van gemaakt is? Kijk eens naar je nagels!",
+    "weetjes": [
+      "De hoorn van een neushoorn is van keratine, hetzelfde spul als jouw nagels en haar.",
+      "Witte neushoorns zijn niet wit! Hun naam komt waarschijnlijk van het woord 'wijd', voor hun brede bek.",
+      "Op dit moment worden er 2.000 neushoorns teruggebracht naar de vrije natuur. Dat is het grootste neushoornavontuur ooit!"
+    ],
+    "video": { "id": "v27WM16tkCA", "titel": "Alles over de neushoorn", "bron": "WWF-Rangers", "taal": "nl" },
+    "vragen": {
+      "jong": [
+        { "vraag": "Waar is de hoorn van een neushoorn van gemaakt?", "opties": ["Van bot", "Van hetzelfde als jouw nagels", "Van steen"], "goed": 1, "uitleg": "Het is keratine, net als je nagels. Daarom is het ook zo zinloos dat stropers erop jagen." }
+      ],
+      "oud": [
+        { "vraag": "Waarom heet de witte neushoorn waarschijnlijk 'wit'?", "opties": ["Hij is helemaal wit", "Van het woord 'wijd', voor zijn brede bek", "Hij rolt graag in witte modder"], "goed": 1, "uitleg": "Witte neushoorns hebben een brede, platte bek om gras te maaien. 'Wijd' werd in het Engels 'white'." },
+        { "vraag": "Hoeveel neushoorns wil het project Rhino Rewild terugbrengen naar de natuur?", "opties": ["20", "200", "2.000"], "goed": 2, "uitleg": "Ze kwamen van een grote boerderij en gaan in 10 jaar naar veilige natuurgebieden in heel Afrika." }
+      ]
+    },
+    "actie": "Rhino Rewild verhuist 2.000 neushoorns van een boerderij naar de vrije natuur. Er zijn er al meer dan 740 verhuisd!",
+    "project": "rhino-rewild"
+  },
+  {
+    "id": "gorilla",
+    "naam": "Berggorilla",
+    "kort": "Berggorilla",
+    "foto": "gorilla-bwindi",
+    "fotoAlt": "Close-up van een berggorilla die rustig in de camera kijkt",
+    "pip": "Berggorilla's zijn sterk, maar ook heel lief voor hun familie. En ze lijken best veel op jou!",
+    "weetjes": [
+      "Berggorilla's eten bijna alleen planten: bladeren, stengels, wortels en soms een vrucht.",
+      "Elke gorilla heeft een eigen neusafdruk. Zo kunnen onderzoekers ze uit elkaar houden.",
+      "Vroeger waren er nog maar zo'n 250 in de bergen. Nu zijn het er meer dan 1.000!"
+    ],
+    "video": { "id": "p4HecYTJ3GM", "titel": "Alles over de gorilla", "bron": "WWF-Rangers", "taal": "nl" },
+    "vragen": {
+      "jong": [
+        { "vraag": "Wat eet een berggorilla vooral?", "opties": ["Vlees", "Vis", "Planten en bladeren"], "goed": 2, "uitleg": "Een grote gorilla eet elke dag een hele berg bladeren en stengels. Hij is bijna helemaal vegetariër!" }
+      ],
+      "oud": [
+        { "vraag": "Hoe heet de baas van een gorillafamilie?", "opties": ["De zilverrug", "De grijskop", "De zwartbuik"], "goed": 0, "uitleg": "Volwassen mannetjes krijgen zilvergrijze haren op hun rug. De zilverrug beschermt de familie." },
+        { "vraag": "Waarom mag je niet bij de gorilla's op bezoek als je verkouden bent?", "opties": ["Gorilla's houden niet van niezen", "Gorilla's kunnen ziek worden van mensen", "Je mag dan niet in het vliegtuig"], "goed": 1, "uitleg": "Gorilla's lijken zoveel op ons dat ze onze ziektes kunnen krijgen, zoals griep." }
+      ]
+    },
+    "actie": "Van het geld dat bezoekers betalen om gorilla's te zien, gaat een deel naar scholen en waterpunten in de dorpen naast het woud.",
+    "project": "berggorillas"
+  },
+  {
+    "id": "cheetah",
+    "naam": "Cheetah (jachtluipaard)",
+    "kort": "Cheetah",
+    "foto": "cheetah",
+    "fotoAlt": "Een cheetah sluipt door het hoge gras",
+    "pip": "De cheetah is de snelste renner van alle landdieren. Zoef! Maar weet je wat hij níet kan?",
+    "weetjes": [
+      "Een cheetah haalt meer dan 100 kilometer per uur. Net zo snel als een auto op de snelweg!",
+      "Een cheetah kan niet brullen. Hij kan wel spinnen, net als een poes.",
+      "De zwarte 'traanstrepen' onder zijn ogen werken als een zonnebril tegen het felle licht."
+    ],
+    "video": { "id": "K79mpsgu2Gc", "titel": "Kwibus – Cheetah", "bron": "Kindertijd KRO-NCRV", "taal": "nl" },
+    "vragen": {
+      "jong": [
+        { "vraag": "Wat kan een cheetah supergoed?", "opties": ["Heel hard rennen", "Zwemmen in de rivier", "Hoog in bomen klimmen"], "goed": 0, "uitleg": "Geen enkel landdier is zo snel als de cheetah. Zijn lange staart helpt hem om bij hoge snelheid te sturen." }
+      ],
+      "oud": [
+        { "vraag": "Hoe hard kan een cheetah rennen?", "opties": ["30 km per uur", "60 km per uur", "Meer dan 100 km per uur"], "goed": 2, "uitleg": "Maar alleen een klein stukje! Na een sprint van een paar honderd meter moet hij uitrusten." },
+        { "vraag": "In welk land leven de meeste cheetahs van de wereld?", "opties": ["Egypte", "Namibië", "Marokko"], "goed": 1, "uitleg": "In Namibië leven de meeste cheetahs, vaak buiten parken, op het land van boeren en dorpen." }
+      ]
+    },
+    "actie": "In Namibië beschermen dorpen zelf de wilde dieren op hun land. Daardoor leven er nu weer cheetahs, olifanten en neushoorns.",
+    "project": "namibie"
+  },
+  {
+    "id": "nijlpaard",
+    "naam": "Nijlpaard",
+    "kort": "Nijlpaard",
+    "foto": "dier-nijlpaard",
+    "fotoAlt": "Een groep nijlpaarden ligt dicht tegen elkaar aan op de oever van een rivier",
+    "pip": "Nijlpaarden zien er grappig en dik uit, maar ze zijn sterk en snel. En ze hebben iets heel slims tegen de zon!",
+    "weetjes": [
+      "Nijlpaarden maken een soort rode zonnebrandcrème op hun huid. Mensen dachten vroeger dat ze bloed zweetten!",
+      "Nijlpaarden kunnen niet echt zwemmen. Ze lopen en huppelen over de bodem van de rivier.",
+      "Overdag liggen ze in het water. 's Nachts gaan ze aan land om gras te eten."
+    ],
+    "video": { "id": "Bjqh4BtTVQ4", "titel": "Nijlpaarden in het water", "bron": "Safaripark Beekse Bergen", "taal": "nl" },
+    "vragen": {
+      "jong": [
+        { "vraag": "Waar is een nijlpaard overdag het liefst?", "opties": ["In een boom", "In het water", "In een hol onder de grond"], "goed": 1, "uitleg": "In het water blijft hij lekker koel en verbrandt zijn huid niet in de zon." }
+      ],
+      "oud": [
+        { "vraag": "Nijlpaarden maken zelf een soort zonnebrandcrème. Welke kleur heeft die?", "opties": ["Roodachtig", "Blauw", "Wit"], "goed": 0, "uitleg": "Het rode vocht beschermt tegen de zon en helpt waarschijnlijk ook tegen bacteriën." },
+        { "vraag": "Wanneer eten nijlpaarden gras?", "opties": ["Vooral 's nachts", "Alleen 's ochtends vroeg", "Nooit, ze eten alleen vis"], "goed": 0, "uitleg": "'s Nachts lopen ze soms kilometers ver om tientallen kilo's gras te eten." }
+      ]
+    },
+    "actie": "In Gorongosa in Mozambique zijn de wilde dieren na een oorlog teruggekomen. Er leven nu weer meer dan 110.000 grote dieren!",
+    "project": "gorongosa"
+  },
+  {
+    "id": "schubdier",
+    "naam": "Schubdier",
+    "kort": "Schubdier",
+    "foto": "dier-schubdier",
+    "fotoAlt": "Een schubdier met grote bruine schubben loopt over droge grond",
+    "pip": "Hé, dat ben ik! Een schubdier. Ik ben het enige zoogdier met echte schubben. Best uniek, toch?",
+    "weetjes": [
+      "Schubdieren hebben geen tanden. Ze eten mieren en termieten met een lange, plakkerige tong.",
+      "Als een schubdier schrikt, rolt het zich op tot een harde bal. Zelfs een leeuw krijgt hem dan niet open.",
+      "Het Afrikaanse grondschubdier loopt vaak op zijn achterpoten, net als Pip!"
+    ],
+    "video": { "id": "gz4HXyxcess", "titel": "Pangolin – World's Weirdest", "bron": "Nat Geo Animals", "taal": "en" },
+    "vragen": {
+      "jong": [
+        { "vraag": "Wat doet een schubdier als het schrikt?", "opties": ["Het brult heel hard", "Het rolt zich op tot een bal", "Het vliegt weg"], "goed": 1, "uitleg": "Met zijn harde schubben is hij dan net een dennenappel in pantser!" }
+      ],
+      "oud": [
+        { "vraag": "Wat eet een schubdier?", "opties": ["Mieren en termieten", "Gras en bladeren", "Vis"], "goed": 0, "uitleg": "Een schubdier eet tienduizenden mieren en termieten per dag. Zo helpt hij de natuur in balans te houden." },
+        { "vraag": "Waarom is het schubdier zo bedreigd?", "opties": ["Het heeft te weinig water", "Er wordt veel illegaal gehandeld in zijn schubben en vlees", "Het wordt opgegeten door olifanten"], "goed": 1, "uitleg": "Het schubdier is een van de meest gesmokkelde zoogdieren ter wereld. Koop dus nooit iets van een wild dier!" }
+      ]
+    },
+    "actie": "Schubdieren worden beschermd door rangers en door mensen die nooit iets kopen dat van een wild dier is gemaakt. Dat kun jij ook!",
+    "project": null
+  },
+  {
+    "id": "kameleon",
+    "naam": "Panterkameleon",
+    "kort": "Kameleon",
+    "foto": "dier-kameleon",
+    "fotoAlt": "Een felgroene kameleon met rode kop zit op een tak",
+    "pip": "Kameleons zijn kleine kunstenaars. Ze kunnen van kleur veranderen. Maar waarom eigenlijk?",
+    "weetjes": [
+      "De ogen van een kameleon kunnen allebei een andere kant op kijken. Zo ziet hij bijna alles om zich heen.",
+      "Zijn tong schiet razendsnel naar voren en kan langer zijn dan zijn hele lichaam.",
+      "Ongeveer de helft van alle kameleonsoorten leeft op het eiland Madagaskar."
+    ],
+    "video": { "id": "E5Vco95EkOM", "titel": "Camouflage kameleon ontrafeld", "bron": "Burgers' Zoo", "taal": "nl" },
+    "vragen": {
+      "jong": [
+        { "vraag": "Wat is bijzonder aan de ogen van een kameleon?", "opties": ["Ze gloeien in het donker", "Ze zijn vierkant", "Ze kunnen allebei een andere kant op kijken"], "goed": 2, "uitleg": "Het ene oog kan naar voren kijken en het andere naar achteren. Handig om insecten te zoeken!" }
+      ],
+      "oud": [
+        { "vraag": "Waarom verandert een kameleon vooral van kleur?", "opties": ["Om te laten zien hoe hij zich voelt en om op te warmen of af te koelen", "Alleen om zich te verstoppen", "Omdat hij ziek is"], "goed": 0, "uitleg": "Felle kleuren zeggen bijvoorbeeld 'ik ben de baas'. Donker worden helpt om zonnewarmte op te nemen." },
+        { "vraag": "Op welk eiland leeft ongeveer de helft van alle kameleonsoorten?", "opties": ["Texel", "Madagaskar", "IJsland"], "goed": 1, "uitleg": "Madagaskar ligt voor de kust van Afrika en heeft heel veel dieren die nergens anders leven." }
+      ]
+    },
+    "actie": "Op Madagaskar zorgen vissersdorpen zelf voor hun zee en mangrovebossen. Zo blijven de kust en de dieren gezond.",
+    "project": "madagaskar"
+  },
+  {
+    "id": "secretarisvogel",
+    "naam": "Secretarisvogel",
+    "kort": "Secretarisvogel",
+    "foto": "dier-secretarisvogel",
+    "fotoAlt": "Een grijze secretarisvogel met lange poten en zwarte kuifveren loopt door droog gras",
+    "pip": "Deze vogel loopt liever dan dat hij vliegt. En met zijn lange poten kan hij keihard schoppen!",
+    "weetjes": [
+      "Een secretarisvogel vangt slangen door er razendsnel en heel hard op te stampen.",
+      "Hij loopt elke dag kilometers door het gras, op zoek naar slangen, muizen en sprinkhanen.",
+      "Zijn kuifveren lijken op de pennen die schrijvers vroeger achter hun oor staken. Daar komt zijn naam waarschijnlijk vandaan."
+    ],
+    "video": { "id": "4pmajnBIFqU", "titel": "Secretarisvogel uit het ei gekropen", "bron": "Safaripark Beekse Bergen", "taal": "nl" },
+    "vragen": {
+      "jong": [
+        { "vraag": "Hoe vangt een secretarisvogel een slang?", "opties": ["Hij schopt en stampt met zijn lange poten", "Hij vangt hem in de lucht", "Hij zingt hem in slaap"], "goed": 0, "uitleg": "Zijn stamp is supersnel en heel krachtig. De lange poten houden hem ver weg van de slang." }
+      ],
+      "oud": [
+        { "vraag": "Waar komt de naam 'secretarisvogel' waarschijnlijk vandaan?", "opties": ["Hij schrijft met zijn snavel in het zand", "Zijn kuifveren lijken op pennen achter het oor van een secretaris", "Hij houdt alle andere vogels bij"], "goed": 1, "uitleg": "Vroeger schreven secretarissen met een veer als pen en staken die achter hun oor." },
+        { "vraag": "Hoe gaat het met de secretarisvogel?", "opties": ["Er zijn er miljoenen", "Hij is uitgestorven", "Hij is bedreigd"], "goed": 2, "uitleg": "Hij verliest zijn graslanden. Daarom is het belangrijk dat savannes beschermd worden." }
+      ]
+    },
+    "actie": "De secretarisvogel heeft open graslanden nodig. Beschermde savannes, zoals in Kenia en Namibië, zijn daarom heel belangrijk.",
+    "project": "amboseli"
+  }
+]

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wildkracht Rangers – voor kinderen</title>
+  <meta name="description" content="Ga met schubdier Pip op ontdekkingstocht langs 10 Afrikaanse dieren. Kijk filmpjes, doe de quiz en word Jonge Ranger!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..700&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="kids.css">
+  <link rel="icon" href="../assets/img/logo-mark.svg" type="image/svg+xml">
+</head>
+<body class="kids">
+  <a class="skip" href="#inhoud">Naar de inhoud</a>
+
+  <header class="kids-header">
+    <div class="wrap header-inner">
+      <a class="kids-logo" href="index.html" aria-label="Wildkracht Rangers – start">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="22" r="11" fill="var(--zon)"/>
+          <path d="M2 27 C 10 23, 16 26, 22 24 S 34 21, 38 24 L38 40 L2 40 Z" fill="var(--savanne-donker)"/>
+        </svg>
+        <span>Wildkracht Rangers<small>voor kinderen van 6 tot 12</small></span>
+      </a>
+      <nav class="kids-nav" aria-label="Kidsmenu">
+        <a href="#dieren">De dieren</a>
+        <a class="verberg-mobiel" href="ouders.html">Voor ouders</a>
+        <a class="verberg-mobiel" href="../index.html">Naar Wildkracht</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhoud">
+    <section class="wrap kids-hero">
+      <div class="kids-hero-grid">
+        <div>
+          <p class="kicker">Hoi ranger!</p>
+          <h1>Ontdek de dieren van <em>Afrika</em></h1>
+          <div class="ballon ballon-onder">
+            <p class="naam">Pip zegt</p>
+            <p>Hoi! Ik ben Pip, een schubdier. Ga je mee op ontdekkingstocht langs 10 Afrikaanse dieren? Je kijkt filmpjes, beantwoordt vragen en aan het eind word je een echte Jonge Ranger!</p>
+            <div data-pip-lees></div>
+          </div>
+        </div>
+        <img class="pip-groot" src="../assets/img/mascotte-pip.webp" alt="Schubdier Pip staat rechtop met een groen sjaaltje om" width="626" height="720">
+      </div>
+
+      <h2 class="sr">Kies je niveau</h2>
+      <div class="niveaus">
+        <a class="niveau" href="quiz.html?niveau=jong">
+          <span class="niveau-label">Junior Ranger</span>
+          <span class="niveau-titel">Ik ben 6, 7 of 8 jaar</span>
+          <span class="niveau-sub">10 dieren · 10 vragen · met voorleesknop</span>
+          <span class="btn btn-zon">Start de tocht</span>
+        </a>
+        <a class="niveau niveau-oud" href="quiz.html?niveau=oud">
+          <span class="niveau-label">Expert Ranger</span>
+          <span class="niveau-titel">Ik ben 9, 10, 11 of 12 jaar</span>
+          <span class="niveau-sub">10 dieren · 20 vragen · moeilijker!</span>
+          <span class="btn btn-zon">Start de tocht</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="hoe-kop" style="padding-top: 24px">
+      <div class="wrap">
+        <h2 id="hoe-kop">Zo werkt het</h2>
+        <ol class="stappen">
+          <li><h3>Kijk het filmpje</h3><p>Bij elk dier hoort een kort filmpje en vertelt Pip iets bijzonders.</p></li>
+          <li><h3>Beantwoord de vraag</h3><p>Fout? Geeft niks! Pip legt het uit, zo leer je juist veel.</p></li>
+          <li><h3>Word Jonge Ranger</h3><p>Kies je favoriete dier en print je eigen ranger-diploma.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="dieren" aria-labelledby="dieren-kop" style="padding-top: 0">
+      <div class="wrap">
+        <h2 id="dieren-kop">De 10 dieren</h2>
+        <p>Klik op een dier om alvast wat weetjes te lezen.</p>
+        <ul class="dieren-grid" data-dieren></ul>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="opdracht-kop" style="padding-top: 0">
+      <div class="wrap">
+        <h2 id="opdracht-kop">Ranger-opdrachten voor thuis</h2>
+        <p>Echte rangers beschermen de natuur. Dat kun jij ook, gewoon bij jou in de buurt!</p>
+        <div data-actielijst></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="dier-dialoog" data-dialoog aria-labelledby="dialoog-titel">
+    <button type="button" class="dialoog-sluit" data-sluit aria-label="Sluiten">×</button>
+    <div class="dialoog-inhoud" data-dialoog-inhoud></div>
+  </dialog>
+
+  <footer class="kids-footer">
+    <div class="wrap">
+      <p>Wildkracht Rangers is onderdeel van <a href="../index.html">Wildkracht</a>, een conceptwebsite over natuurbehoud in Afrika.</p>
+      <nav aria-label="Kidsfooter">
+        <a href="ouders.html">Voor ouders &amp; leraren</a>
+        <a href="../index.html">Naar Wildkracht</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="kids.js"></script>
+  <script>
+    (function () {
+      const pip = document.querySelector("[data-pip-lees]");
+      pip.innerHTML = Rangers.voorleesKnop(pip.closest(".ballon").querySelectorAll("p")[1].textContent);
+      Rangers.actielijst(document.querySelector("[data-actielijst]"));
+
+      const dialoog = document.querySelector("[data-dialoog]");
+      const inhoud = document.querySelector("[data-dialoog-inhoud]");
+      Rangers.dieren.then((dieren) => {
+        const lijst = document.querySelector("[data-dieren]");
+        lijst.innerHTML = dieren.map((d) => `
+          <li><button type="button" data-dier="${d.id}">
+            <img src="${Rangers.fotoPad(d.foto)}" alt="" loading="lazy"><span>${d.kort}</span>
+          </button></li>`).join("");
+        lijst.addEventListener("click", (e) => {
+          const knop = e.target.closest("[data-dier]");
+          if (!knop) return;
+          const d = dieren.find((x) => x.id === knop.dataset.dier);
+          inhoud.innerHTML = `
+            <img class="dialoog-foto" src="${Rangers.fotoPad(d.foto)}" alt="${d.fotoAlt}">
+            <h2 id="dialoog-titel">${d.naam}</h2>
+            <div class="ballon" style="margin-bottom:20px"><p class="naam">Pip zegt</p><p>${d.pip}</p>${Rangers.voorleesKnop(d.pip)}</div>
+            <h3>Wist je dat…</h3>
+            <ul class="weetjes">${d.weetjes.map((w) => `<li>${w}</li>`).join("")}</ul>
+            ${Rangers.video(d.video)}`;
+          dialoog.showModal();
+        });
+      });
+      document.querySelector("[data-sluit]").addEventListener("click", () => dialoog.close());
+      dialoog.addEventListener("click", (e) => { if (e.target === dialoog) dialoog.close(); });
+      dialoog.addEventListener("close", () => { Rangers.stop(); inhoud.innerHTML = ""; });
+    })();
+  </script>
+</body>
+</html>

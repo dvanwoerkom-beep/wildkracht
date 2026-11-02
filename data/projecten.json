@@ -1,0 +1,282 @@
+[
+  {
+    "id": "gorongosa",
+    "nr": 1,
+    "titel": "Gorongosa: een park staat op uit de as",
+    "kort": "Gorongosa",
+    "land": "Mozambique",
+    "aanpak": "Herstel na oorlog",
+    "teaser": "Na de burgeroorlog was het park bijna leeg. Nu leven er weer ruim 110.000 grote dieren – en groeien er rond het park banen, scholen en koffie.",
+    "foto": "gorongosa-waterbok",
+    "fotoAlt": "Een waterbok met lange gebogen hoorns kijkt recht in de camera",
+    "fotoOnderschrift": "Waterbok in Gorongosa National Park",
+    "coord": [
+      34.4,
+      -18.8
+    ],
+    "cijfers": [
+      {
+        "getal": "110.513",
+        "label": "grote dieren geteld in 2024, een record"
+      },
+      {
+        "getal": "90%",
+        "label": "van de grote zoogdieren was na de oorlog verdwenen"
+      },
+      {
+        "getal": "6",
+        "label": "luipaarden teruggebracht sinds 2020"
+      },
+      {
+        "getal": "2025",
+        "label": "BBVA-wereldprijs voor natuurbehoud"
+      }
+    ]
+  },
+  {
+    "id": "akagera",
+    "nr": 2,
+    "titel": "Akagera: van leeg park naar de Big Five",
+    "kort": "Akagera",
+    "land": "Rwanda",
+    "aanpak": "Dieren terugbrengen",
+    "teaser": "Leeuwen en neushoorns kwamen terug. Het park betaalt nu zijn eigen kosten en deelt de inkomsten met de dorpen eromheen.",
+    "foto": "akagera-giraffen",
+    "fotoAlt": "Twee giraffen in het goudgele gras van Akagera",
+    "fotoOnderschrift": "Giraffen in Akagera National Park",
+    "coord": [
+      30.7,
+      -1.9
+    ],
+    "verschuif": [
+      6,
+      22
+    ],
+    "cijfers": [
+      {
+        "getal": "2015",
+        "label": "leeuwen terug na 15 jaar afwezigheid"
+      },
+      {
+        "getal": "70",
+        "label": "witte neushoorns erbij in juni 2025"
+      },
+      {
+        "getal": "45%",
+        "label": "van de betalende bezoekers is Rwandees (2024)"
+      },
+      {
+        "getal": "10%",
+        "label": "van de inkomsten gaat naar omliggende dorpen"
+      }
+    ]
+  },
+  {
+    "id": "rhino-rewild",
+    "nr": 3,
+    "titel": "Rhino Rewild: 2.000 neushoorns terug naar het wild",
+    "kort": "Rhino Rewild",
+    "land": "Zuid-Afrika",
+    "aanpak": "Neushoorns herplaatsen",
+    "teaser": "De grootste neushoornfokkerij ter wereld wordt leeggemaakt, zodat de dieren weer vrij kunnen leven in beschermde natuurgebieden door heel Afrika.",
+    "foto": "rhino-rewild",
+    "fotoAlt": "Een witte neushoorn graast tussen het droge gras en de acacia's",
+    "fotoOnderschrift": "Witte neushoorn in het wild",
+    "coord": [
+      26.6,
+      -26.6
+    ],
+    "cijfers": [
+      {
+        "getal": "2.000",
+        "label": "neushoorns op de voormalige kwekerij"
+      },
+      {
+        "getal": "740+",
+        "label": "al verplaatst naar het wild"
+      },
+      {
+        "getal": "19",
+        "label": "ontvangende natuurgebieden"
+      },
+      {
+        "getal": "10 jaar",
+        "label": "om alle neushoorns te herplaatsen"
+      }
+    ]
+  },
+  {
+    "id": "namibie",
+    "nr": 4,
+    "titel": "Namibië: dorpen die hun eigen wild beschermen",
+    "kort": "Conservancies",
+    "land": "Namibië",
+    "aanpak": "Gemeenschapsnatuur",
+    "teaser": "In 87 conservancies beslissen gemeenschappen zelf over hun land en hun wild. Olifanten, cheetahs en neushoorns kwamen terug.",
+    "foto": "namibie-woestijnolifant",
+    "fotoAlt": "Een woestijnolifant gooit rood zand over zijn rug",
+    "fotoOnderschrift": "Woestijnolifant in Damaraland",
+    "coord": [
+      14.4,
+      -20.2
+    ],
+    "cijfers": [
+      {
+        "getal": "87",
+        "label": "gemeenschapsnatuurgebieden (conservancies)"
+      },
+      {
+        "getal": "186.000 km²",
+        "label": "ruim vier keer Nederland"
+      },
+      {
+        "getal": "+23%",
+        "label": "wild op gemeenschapsgrond"
+      },
+      {
+        "getal": "N$142 mln",
+        "label": "per jaar voor plattelandsgemeenschappen"
+      }
+    ]
+  },
+  {
+    "id": "berggorillas",
+    "nr": 5,
+    "titel": "Berggorilla's: de mensaap die weer groeit",
+    "kort": "Berggorilla's",
+    "land": "Oeganda · Rwanda · DR Congo",
+    "aanpak": "Toerisme dat dorpen helpt",
+    "teaser": "Van een paar honderd naar ruim duizend. Van elke gorillavergunning gaat een deel naar de dorpen rond het woud.",
+    "foto": "gorilla-bwindi",
+    "fotoAlt": "Close-up van een berggorilla die rustig in de camera kijkt",
+    "fotoOnderschrift": "Berggorilla in Bwindi, Oeganda",
+    "coord": [
+      29.6,
+      -1.05
+    ],
+    "verschuif": [
+      -26,
+      -18
+    ],
+    "cijfers": [
+      {
+        "getal": "± 250",
+        "label": "berggorilla's in de Virunga's, begin jaren '80"
+      },
+      {
+        "getal": "1.063",
+        "label": "bij de laatste totaaltelling"
+      },
+      {
+        "getal": "$10",
+        "label": "per vergunning naar dorpen in Oeganda"
+      },
+      {
+        "getal": "2018",
+        "label": "niet langer 'ernstig bedreigd'"
+      }
+    ]
+  },
+  {
+    "id": "amboseli",
+    "nr": 6,
+    "titel": "Amboseli: krijgers die leeuwen beschermen",
+    "kort": "Amboseli",
+    "land": "Kenia",
+    "aanpak": "Samenleven met roofdieren",
+    "teaser": "Jonge Maasai die vroeger op leeuwen jaagden, volgen ze nu. Ze waarschuwen herders en voorkomen zo conflicten.",
+    "foto": "amboseli-leeuwen",
+    "fotoAlt": "Drie leeuwen liggen naast elkaar en kijken in de camera",
+    "fotoOnderschrift": "Leeuwen in Kenia",
+    "coord": [
+      37.26,
+      -2.65
+    ],
+    "cijfers": [
+      {
+        "getal": "200+",
+        "label": "leeuwen gedood tussen 2001 en 2011"
+      },
+      {
+        "getal": "2007",
+        "label": "start van Lion Guardians"
+      },
+      {
+        "getal": "0",
+        "label": "olifanten gestroopt sinds begin 2018 (Big Life-gebied)"
+      },
+      {
+        "getal": "4 van 4",
+        "label": "wraakjachten gestopt in begin 2025"
+      }
+    ]
+  },
+  {
+    "id": "madagaskar",
+    "nr": 7,
+    "titel": "Madagaskar: vissers die de zee laten herstellen",
+    "kort": "Madagaskar",
+    "land": "Madagaskar",
+    "aanpak": "Kust & zee",
+    "teaser": "Dorpen sluiten octopusgebieden een paar maanden, en daarna vangen ze juist méér. Het idee verspreidde zich langs de hele kust.",
+    "foto": "madagaskar-mangrove",
+    "fotoAlt": "Een man peddelt in een houten kano door een kanaal tussen mangroves",
+    "fotoOnderschrift": "Mangroves bij Morondava, Madagaskar",
+    "coord": [
+      43.6,
+      -22.1
+    ],
+    "cijfers": [
+      {
+        "getal": "2004",
+        "label": "eerste octopussluiting in Andavadoaka"
+      },
+      {
+        "getal": "60+",
+        "label": "lokaal beheerde zeegebieden"
+      },
+      {
+        "getal": "2–3 mnd",
+        "label": "duurt een tijdelijke sluiting"
+      },
+      {
+        "getal": "2024",
+        "label": "studie bevestigt hogere vangst na sluiting"
+      }
+    ]
+  },
+  {
+    "id": "niger",
+    "nr": 8,
+    "titel": "Niger: het bos dat onder de grond wachtte",
+    "kort": "Niger",
+    "land": "Niger",
+    "aanpak": "Landherstel door boeren",
+    "teaser": "Boeren laten oude boomstronken in hun akkers opnieuw uitlopen. Zo werd naar schatting 5 miljoen hectare weer groen.",
+    "foto": "niger-gierst",
+    "fotoAlt": "Een gierstveld met verspreide bomen in Niger",
+    "fotoOnderschrift": "Gierst tussen de bomen, Niger",
+    "coord": [
+      7.6,
+      13.6
+    ],
+    "cijfers": [
+      {
+        "getal": "± 5 mln ha",
+        "label": "weer groen (schatting 2009)"
+      },
+      {
+        "getal": "± 200 mln",
+        "label": "extra bomen (schatting)"
+      },
+      {
+        "getal": "500.000 ton",
+        "label": "extra graan per jaar (schatting)"
+      },
+      {
+        "getal": "20+",
+        "label": "landen gebruiken nu deze methode"
+      }
+    ]
+  }
+]
