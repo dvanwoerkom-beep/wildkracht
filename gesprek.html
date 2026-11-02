@@ -50,12 +50,18 @@
         <h2 id="chat-kop" class="sr">Berichten</h2>
 
         <div class="chat-uitgelogd" data-uitgelogd hidden>
-          <h3>Log in om mee te lezen en te praten</h3>
-          <p>Je logt in met je Google-account. Andere bezoekers zien je naam en profielfoto bij je berichten.</p>
+          <h3>Een gesprek voor leden</h3>
+          <p>Het gesprek is alleen toegankelijk voor mensen die door de beheerder zijn uitgenodigd. Ben je lid? Log in met het Google-account waarmee je bent toegevoegd. Andere leden zien je naam en profielfoto bij je berichten.</p>
           <button type="button" class="btn btn-accent google-knop" data-login>
             <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.5 0 6.6 1.2 9.1 3.6l6.8-6.8C35.8 2.4 30.3 0 24 0 14.6 0 6.6 5.4 2.7 13.3l7.9 6.1C12.5 13.6 17.8 9.5 24 9.5z"/><path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.9-2.2 5.3-4.6 6.9l7.4 5.8c4.3-4 6.9-9.9 6.9-17.2z"/><path fill="#FBBC05" d="M10.6 28.6c-.5-1.4-.8-3-.8-4.6s.3-3.2.8-4.6l-7.9-6.1C1 16.6 0 20.2 0 24s1 7.4 2.7 10.7l7.9-6.1z"/><path fill="#34A853" d="M24 48c6.5 0 11.9-2.1 15.8-5.8l-7.4-5.8c-2.1 1.4-4.8 2.3-8.4 2.3-6.2 0-11.5-4.1-13.4-9.8l-7.9 6.1C6.6 42.6 14.6 48 24 48z"/></svg>
             Inloggen met Google
           </button>
+        </div>
+
+        <div class="chat-uitgelogd" data-geen-toegang hidden>
+          <h3>Dit gesprek is alleen voor leden</h3>
+          <p>Je bent ingelogd als <strong data-mijn-email></strong>, maar dit adres staat (nog) niet op de ledenlijst. Wil je meepraten? Vraag de beheerder van Wildkracht om je toe te voegen.</p>
+          <button type="button" class="btn btn-licht" data-logout-gesprek>Uitloggen of ander account kiezen</button>
         </div>
 
         <div class="chat-venster" data-venster hidden>
@@ -84,7 +90,7 @@
             <li><strong>Geen reclame, spam of nepnieuws.</strong> Noem je een cijfer? Zet er een bron bij.</li>
             <li><strong>Zie je iets wat niet klopt?</strong> Gebruik de knop <em>Meld</em>. De beheerder kijkt ernaar en kan berichten verwijderen.</li>
           </ol>
-          <p class="huisregels-noot">Je kunt je eigen berichten altijd zelf verwijderen. Berichten zijn alleen zichtbaar voor ingelogde bezoekers.</p>
+          <p class="huisregels-noot">Je kunt je eigen berichten altijd zelf verwijderen. Berichten zijn alleen zichtbaar voor leden.</p>
         </section>
 
         <section class="meldingen" data-meldingen hidden aria-labelledby="meld-kop">

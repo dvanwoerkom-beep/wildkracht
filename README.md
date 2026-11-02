@@ -63,8 +63,9 @@ De site draait op **Firebase Hosting**: https://wildkracht-nl.web.app (Firebase-
 
 - **Inloggen** met een Google-account: `assets/js/firebase.js` (verbinding) en `assets/js/account.js` (knop in de header).
 - **Gesprek**: `gesprek.html` en `assets/js/gesprek.js`. Berichten staan in Firestore (regio Europa, `eur3`).
-- **Beveiliging**: `firestore.rules`. Alleen ingelogde bezoekers lezen en schrijven, maximaal 1000 tekens en 1 bericht per 5 seconden. Je verwijdert alleen je eigen berichten. De beheerder (`dvanwoerkom@gmail.com`) kan alles verwijderen en ziet de meldingen.
-- Een andere beheerder instellen: pas het e-mailadres aan in **zowel** `firestore.rules` als `assets/js/firebase.js`.
+- **Gesloten gesprek / ledenbeheer**: `beheer.html` en `assets/js/beheer.js` (link in het accountmenu voor beheerders). Alleen e-mailadressen op de ledenlijst (Firestore-collectie `leden`) hebben toegang tot het gesprek. Rollen: *lid* (meepraten) en *beheerder* (ook leden, berichten en meldingen beheren). De eigenaar (`dvanwoerkom@gmail.com`) heeft altijd toegang en kan niet worden verwijderd.
+- **Beveiliging**: `firestore.rules`. Alleen leden lezen en schrijven, maximaal 1000 tekens en 1 bericht per 5 seconden. Je verwijdert alleen je eigen berichten. Beheerders kunnen alles verwijderen en zien de meldingen.
+- Een andere eigenaar instellen: pas het e-mailadres aan in **zowel** `firestore.rules` als `assets/js/firebase.js`. Extra beheerders voeg je gewoon toe op de beheerpagina.
 
 Publiceren na een wijziging:
 

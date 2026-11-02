@@ -1,6 +1,6 @@
 /* Wildkracht – inlogknop in de header (op elke pagina van de volwassenensite) */
 
-import { auth, google } from "./firebase.js";
+import { auth, google, haalRol, isBeheerRol } from "./firebase.js";
 import { onAuthStateChanged, signInWithPopup, signInWithRedirect, signOut } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 
 export async function login() {
@@ -24,7 +24,7 @@ const escape = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;"
 
 const plek = document.querySelector("[data-account]");
 if (plek) {
-  onAuthStateChanged(auth, (gebruiker) => {
+  onAuthStateChanged(auth, async (gebruiker) => {
     if (!gebruiker) {
       plek.innerHTML = `<button type="button" class="account-knop" data-login>Inloggen</button>`;
       return;
@@ -41,6 +41,11 @@ if (plek) {
         <a href="gesprek.html">Naar het gesprek</a>
         <button type="button" data-logout>Uitloggen</button>
       </div>`;
+    // Beheerders krijgen een extra link naar de beheerpagina
+    if (isBeheerRol(await haalRol(gebruiker)) && auth.currentUser?.uid === gebruiker.uid) {
+      plek.querySelector('.account-menu a[href="gesprek.html"]')
+        ?.insertAdjacentHTML("afterend", `<a href="beheer.html">Leden beheren</a>`);
+    }
   });
 
   plek.addEventListener("click", (e) => {

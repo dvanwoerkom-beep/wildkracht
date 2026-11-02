@@ -576,3 +576,44 @@ section[id] { scroll-margin-top: 56px; }
   .gesprek-zij { position: static; order: -1; }
   .berichten { height: 60vh; }
 }
+
+/* ---------- Ledenbeheer ---------- */
+.beheer { padding-bottom: var(--section-y); display: grid; gap: 24px; }
+.beheer [data-beheerder] { display: grid; gap: 24px; }
+.beheer [hidden] { display: none !important; }
+.beheer-blok { background: var(--papier); border-radius: var(--radius-lg); padding: clamp(22px, 4vw, 36px); box-shadow: 0 1px 0 var(--lijn); }
+.beheer-blok h2 { font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); }
+.lid-form { display: grid; grid-template-columns: 1.3fr 1fr 1fr auto; gap: 14px; align-items: end; }
+.lid-form label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; font-size: .92rem; }
+.lid-form input, .lid-form select, .leden-tabel select, .zoek input {
+  font: 1rem var(--font-tekst); min-height: 48px; padding: 0 14px; border: 2px solid var(--lijn); border-radius: var(--radius); background: #fff; color: var(--inkt);
+}
+.lid-form input:focus, .lid-form select:focus, .leden-tabel select:focus, .zoek input:focus { outline: none; border-color: var(--zon); }
+.optioneel { font-weight: 400; color: var(--inkt-zacht); }
+.beheer-melding { min-height: 1.4em; margin: 14px 0 0; font-weight: 600; color: var(--savanne-donker); }
+.beheer-melding.is-fout { color: var(--zon-donker); }
+.deel-link { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; margin-top: 18px; padding: 14px 16px; background: var(--zand); border-radius: var(--radius); font-size: .92rem; }
+.deel-link code { font-size: .9rem; background: #fff; padding: 6px 10px; border-radius: 8px; overflow-wrap: anywhere; }
+.leden-kop { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; }
+.leden-kop h2 { margin: 0; }
+.zoek input { min-width: 260px; }
+.tabel-wrap { overflow-x: auto; }
+.leden-tabel { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.leden-tabel th { text-align: left; font: 650 .75rem var(--font-tekst); letter-spacing: .12em; text-transform: uppercase; color: var(--inkt-zacht); padding: 10px 12px; border-bottom: 2px solid var(--inkt); }
+.leden-tabel td { padding: 12px; border-bottom: 1px solid var(--lijn); vertical-align: middle; overflow-wrap: anywhere; }
+.leden-tabel td small { display: block; color: var(--inkt-zacht); font-size: .78rem; }
+.leden-tabel select { min-height: 40px; padding: 0 10px; }
+.leden-tabel .leeg { color: var(--inkt-zacht); }
+.is-eigenaar td { background: rgba(233, 194, 125, .25); }
+.rol-label { font-weight: 650; }
+.verwijder-knop { border: 0; background: none; color: var(--zon-donker); font: 600 .9rem var(--font-tekst); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; padding: 6px 0; }
+@media (max-width: 900px) { .lid-form { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) {
+  .lid-form { grid-template-columns: 1fr; }
+  .zoek, .zoek input { width: 100%; min-width: 0; }
+  .leden-tabel thead { display: none; }
+  .leden-tabel tr { display: block; padding: 12px 0; border-bottom: 1px solid var(--lijn); }
+  .leden-tabel td { display: flex; justify-content: space-between; gap: 12px; border: 0; padding: 4px 0; }
+  .leden-tabel td[data-label]::before { content: attr(data-label); font-weight: 600; color: var(--inkt-zacht); font-size: .85rem; }
+  .leden-tabel td:empty { display: none; }
+}

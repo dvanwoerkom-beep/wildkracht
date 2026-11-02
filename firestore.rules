@@ -1,27 +1,61 @@
 rules_version = '2';
 
-// Wildkracht – beveiligingsregels voor de chat
-// - Alleen ingelogde bezoekers (Google-account) kunnen berichten lezen en plaatsen.
-// - Je kunt alleen berichten plaatsen onder je eigen naam, max. 1000 tekens, max. 1 bericht per 5 seconden.
-// - Je kunt je eigen berichten verwijderen; de beheerder kan alle berichten verwijderen.
-// - Meldingen kan iedere ingelogde bezoeker doen, maar alleen de beheerder kan ze lezen.
+// Wildkracht – beveiligingsregels
+// Gesloten gesprek: alleen mensen op de ledenlijst (collectie "leden", document-ID = e-mailadres in kleine letters)
+// kunnen het gesprek lezen en erin schrijven. De eigenaar staat altijd op de lijst en kan niet worden verwijderd.
+// Rollen: "lid" (meepraten) en "beheerder" (meepraten + leden beheren + berichten en meldingen beheren).
 service cloud.firestore {
   match /databases/{database}/documents {
 
     function ingelogd() {
-      return request.auth != null;
+      return request.auth != null && request.auth.token.email_verified == true;
+    }
+
+    function mijnEmail() {
+      return request.auth.token.email.lower();
+    }
+
+    function isEigenaar() {
+      return ingelogd() && mijnEmail() == 'dvanwoerkom@gmail.com';
+    }
+
+    function lidPad() {
+      return /databases/$(database)/documents/leden/$(mijnEmail());
+    }
+
+    function isLid() {
+      return isEigenaar() || (ingelogd() && exists(lidPad()));
     }
 
     function isBeheerder() {
-      return ingelogd()
-        && request.auth.token.email == 'dvanwoerkom@gmail.com'
-        && request.auth.token.email_verified == true;
+      return isEigenaar() || (ingelogd() && exists(lidPad()) && get(lidPad()).data.rol == 'beheerder');
     }
 
-    match /berichten/{berichtId} {
-      allow read: if ingelogd();
+    // ---------- Ledenlijst ----------
+    match /leden/{email} {
+      // Beheerders zien de hele lijst; iedereen mag zijn eigen inschrijving opvragen
+      allow get: if isBeheerder() || (ingelogd() && email == mijnEmail());
+      allow list: if isBeheerder();
 
-      allow create: if ingelogd()
+      allow create, update: if isBeheerder()
+        && email == email.lower()
+        && email.matches('^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$')
+        && email != 'dvanwoerkom@gmail.com'
+        && request.resource.data.keys().hasOnly(['rol', 'notitie', 'toegevoegdOp', 'toegevoegdDoor'])
+        && request.resource.data.rol in ['lid', 'beheerder']
+        && request.resource.data.notitie is string
+        && request.resource.data.notitie.size() <= 100
+        && request.resource.data.toegevoegdOp is timestamp
+        && request.resource.data.toegevoegdDoor is string;
+
+      allow delete: if isBeheerder();
+    }
+
+    // ---------- Gesprek ----------
+    match /berichten/{berichtId} {
+      allow read: if isLid();
+
+      allow create: if isLid()
         && request.resource.data.keys().hasAll(['tekst', 'uid', 'naam', 'tijd'])
         && request.resource.data.keys().hasOnly(['tekst', 'uid', 'naam', 'foto', 'tijd'])
         && request.resource.data.uid == request.auth.uid
@@ -34,7 +68,7 @@ service cloud.firestore {
         // anti-spam: in dezelfde schrijfactie moet de "laatst geplaatst"-tijd worden bijgewerkt
         && getAfter(/databases/$(database)/documents/gebruikers/$(request.auth.uid)).data.laatst == request.time;
 
-      allow delete: if ingelogd()
+      allow delete: if isLid()
         && (resource.data.uid == request.auth.uid || isBeheerder());
 
       allow update: if false;
@@ -42,8 +76,8 @@ service cloud.firestore {
 
     // Per gebruiker alleen het tijdstip van het laatste bericht (voor de anti-spamregel)
     match /gebruikers/{uid} {
-      allow read: if ingelogd() && request.auth.uid == uid;
-      allow create, update: if ingelogd()
+      allow read: if isLid() && request.auth.uid == uid;
+      allow create, update: if isLid()
         && request.auth.uid == uid
         && request.resource.data.keys().hasOnly(['laatst'])
         && request.resource.data.laatst == request.time
@@ -51,7 +85,7 @@ service cloud.firestore {
     }
 
     match /meldingen/{meldingId} {
-      allow create: if ingelogd()
+      allow create: if isLid()
         && request.resource.data.keys().hasOnly(['berichtId', 'tekst', 'naamAfzender', 'melderUid', 'melderNaam', 'tijd'])
         && request.resource.data.melderUid == request.auth.uid
         && request.resource.data.melderNaam == request.auth.token.name

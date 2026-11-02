@@ -1,7 +1,7 @@
 /* Wildkracht – het gesprek (realtime chat via Firestore) */
 
-import { auth, db, BEHEERDER } from "./firebase.js";
-import { login } from "./account.js";
+import { auth, db, haalRol, isBeheerRol } from "./firebase.js";
+import { login, logout } from "./account.js";
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 import {
   collection, doc, query, orderBy, limit, onSnapshot, writeBatch, deleteDoc, addDoc, serverTimestamp,
@@ -16,6 +16,7 @@ const form = $("[data-form]");
 const teller = $("[data-teller]");
 const fout = $("[data-fout]");
 const meldBlok = $("[data-meldingen]");
+const geenToegang = $("[data-geen-toegang]");
 
 const MAX_BERICHTEN = 150;
 let gebruiker = null;
@@ -29,17 +30,30 @@ const tijdFormaat = new Intl.DateTimeFormat("nl-NL", { day: "numeric", month: "s
 const tijdTekst = (ts) => (ts ? tijdFormaat.format(ts.toDate()) : "zojuist");
 
 $("[data-login]").addEventListener("click", login);
+$("[data-logout-gesprek]").addEventListener("click", logout);
 
-onAuthStateChanged(auth, (g) => {
-  gebruiker = g;
-  isBeheerder = !!g && g.email === BEHEERDER && g.emailVerified;
-  laden.hidden = true;
+onAuthStateChanged(auth, async (g) => {
   stopBerichten?.(); stopBerichten = null;
   stopMeldingen?.(); stopMeldingen = null;
-  uitgelogd.hidden = !!g;
-  venster.hidden = !g;
+  lijst.innerHTML = "";
+  gebruiker = g;
+  laden.hidden = false;
+  [uitgelogd, venster, geenToegang, meldBlok].forEach((el) => (el.hidden = true));
+
+  if (!g) { laden.hidden = true; uitgelogd.hidden = false; return; }
+
+  // Gesloten gesprek: alleen mensen op de ledenlijst
+  const rol = await haalRol(g);
+  if (auth.currentUser?.uid !== g.uid) return; // inmiddels uitgelogd of gewisseld
+  laden.hidden = true;
+  if (!rol) {
+    $("[data-mijn-email]").textContent = g.email;
+    geenToegang.hidden = false;
+    return;
+  }
+  isBeheerder = isBeheerRol(rol);
+  venster.hidden = false;
   meldBlok.hidden = !isBeheerder;
-  if (!g) { lijst.innerHTML = ""; return; }
   luisterNaarBerichten();
   if (isBeheerder) luisterNaarMeldingen();
 });

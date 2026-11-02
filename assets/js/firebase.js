@@ -3,7 +3,7 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
 import { getAuth, GoogleAuthProvider } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 const app = initializeApp({
   apiKey: "AIzaSyCTq5VqOKrXz5GHoMQrqvY_PbKFxZxmSuI",
@@ -20,5 +20,20 @@ export const google = new GoogleAuthProvider();
 google.setCustomParameters({ prompt: "select_account" });
 export const db = getFirestore(app);
 
-// Beheerder (mag alle berichten verwijderen en meldingen zien). Moet gelijk zijn aan firestore.rules.
-export const BEHEERDER = "dvanwoerkom@gmail.com";
+// Eigenaar: staat altijd op de ledenlijst en is altijd beheerder. Moet gelijk zijn aan firestore.rules.
+export const EIGENAAR = "dvanwoerkom@gmail.com";
+
+// Geeft de rol van een ingelogde gebruiker: "eigenaar", "beheerder", "lid" of null (geen toegang)
+export async function haalRol(gebruiker) {
+  if (!gebruiker?.email || !gebruiker.emailVerified) return null;
+  const email = gebruiker.email.toLowerCase();
+  if (email === EIGENAAR) return "eigenaar";
+  try {
+    const lid = await getDoc(doc(db, "leden", email));
+    return lid.exists() ? lid.data().rol : null;
+  } catch {
+    return null;
+  }
+}
+
+export const isBeheerRol = (rol) => rol === "eigenaar" || rol === "beheerder";
